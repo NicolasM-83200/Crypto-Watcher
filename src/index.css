@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Saira Condensed', sans-serif;
+  background: url('/wave.svg') center/cover;
+  background-size: 2000%;
+  @apply text-white min-h-screen;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+label {
+  user-select: none;
+}
+
+@layer component {
+  .top {
+    @apply mt-3 mb-8 mx-auto text-center select-none animate-animLogo;
+  }
+  .top img {
+    @apply h-6 transition-transform duration-500 cursor-pointer hover:scale-125;
+  }
+}
